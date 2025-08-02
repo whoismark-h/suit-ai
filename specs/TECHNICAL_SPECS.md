@@ -52,8 +52,6 @@ Suit-AI is an AI-powered legal assistant that automates legal research, document
 ```
 suits-ai/
 ├── backend/
-├── data/                  # Scraped data storage
-├── logs/                  # Crawler logs
 ├── README.md
 ├── frontend/
 ├── workflows/
