@@ -1,0 +1,42 @@
+{
+    "mcpServers": {
+      "context7": {
+        "type": "stdio",
+        "command": "npx",
+        "args": [
+          "-y",
+          "@upstash/context7-mcp"
+        ],
+        "env": {}
+      },
+      "supabase": {
+        "command": "npx",
+        "args": [
+          "-y",
+          "@supabase/mcp-server-supabase@latest",
+          "--project-ref=yctmxqturmkjaanarcib"
+        ],
+        "env": {
+          "SUPABASE_ACCESS_TOKEN": "${SUPABASE_ACCESS_TOKEN}"
+        }
+      },
+      "n8n-mcp": {
+        "command": "npx",
+        "args": [
+          "n8n-mcp"
+        ],
+        "env": {
+          "MCP_MODE": "stdio",
+          "LOG_LEVEL": "error",
+          "DISABLE_CONSOLE_OUTPUT": "true"
+        }
+      },
+      "n8n-workflows-docs": {
+        "command": "npx",
+        "args": [
+          "mcp-remote",
+          "https://gitmcp.io/Zie619/n8n-workflows"
+        ]
+      }
+    }
+  }
